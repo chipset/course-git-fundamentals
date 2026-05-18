@@ -1,0 +1,3 @@
+Initial project snapshot
+
+Track the starting README and app source so later lessons have a clean baseline.
