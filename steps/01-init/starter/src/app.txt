@@ -1,0 +1,3 @@
+Training App
+Version: 1
+Status: starting point
