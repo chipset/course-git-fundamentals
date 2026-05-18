@@ -1,0 +1,163 @@
+{
+  "id": "git-fundamentals",
+  "title": "Git Fundamentals",
+  "description": "A generic hands-on Git course covering repositories, staging, commits, history, ignores, branching, merging, conflicts, remotes, file reset, commit reset, revert, stash, and reflog recovery.",
+  "version": "1.0.0",
+  "engineVersion": ">=0.3.5",
+  "steps": [
+    {
+      "id": "init",
+      "title": "Initialize a Repository",
+      "instructions": "steps/01-init/instructions.md",
+      "starter": "steps/01-init/starter",
+      "validator": "steps/01-init/validate.js",
+      "hints": [
+        "Run git init.",
+        "Set local user.name and user.email so commits work in a training environment."
+      ]
+    },
+    {
+      "id": "stage-commit",
+      "title": "Stage and Commit",
+      "instructions": "steps/02-stage-commit/instructions.md",
+      "starter": "steps/02-stage-commit/starter",
+      "validator": "steps/02-stage-commit/validate.js",
+      "hints": [
+        "Use git status before and after git add.",
+        "Commit README.md and src/app.txt together."
+      ]
+    },
+    {
+      "id": "diff-log",
+      "title": "Inspect Diffs and History",
+      "instructions": "steps/03-diff-log/instructions.md",
+      "starter": "steps/03-diff-log/starter",
+      "validator": "steps/03-diff-log/validate.js",
+      "hints": [
+        "Use git diff before staging and git diff --staged after staging.",
+        "Finish with a commit that records the notes file."
+      ]
+    },
+    {
+      "id": "gitignore",
+      "title": "Ignore Generated Files",
+      "instructions": "steps/04-gitignore/instructions.md",
+      "starter": "steps/04-gitignore/starter",
+      "validator": "steps/04-gitignore/validate.js",
+      "hints": [
+        "Create .gitignore.",
+        "Use git check-ignore to verify ignored paths."
+      ]
+    },
+    {
+      "id": "branching",
+      "title": "Create and Work on a Branch",
+      "instructions": "steps/05-branching/instructions.md",
+      "starter": "steps/05-branching/starter",
+      "validator": "steps/05-branching/validate.js",
+      "hints": [
+        "Use git switch -c feature/profile-card.",
+        "Commit profile.md on the feature branch."
+      ]
+    },
+    {
+      "id": "merging",
+      "title": "Merge a Feature Branch",
+      "instructions": "steps/06-merging/instructions.md",
+      "starter": "steps/06-merging/starter",
+      "validator": "steps/06-merging/validate.js",
+      "hints": [
+        "Switch back to main.",
+        "Merge feature/profile-card into main."
+      ]
+    },
+    {
+      "id": "conflicts",
+      "title": "Resolve a Merge Conflict",
+      "instructions": "steps/07-conflicts/instructions.md",
+      "starter": "steps/07-conflicts/starter",
+      "validator": "steps/07-conflicts/validate.js",
+      "hints": [
+        "Create two branches that edit the same line in profile.md.",
+        "Resolve the conflict by keeping Role: Collaborative editor."
+      ]
+    },
+    {
+      "id": "remotes",
+      "title": "Create and Push to a Remote",
+      "instructions": "steps/08-remotes/instructions.md",
+      "starter": "steps/08-remotes/starter",
+      "validator": "steps/08-remotes/validate.js",
+      "hints": [
+        "Use a local bare repository as origin.",
+        "Push main with -u so the branch tracks origin/main."
+      ]
+    },
+    {
+      "id": "fetch-pull",
+      "title": "Fetch and Pull Remote Changes",
+      "instructions": "steps/09-fetch-pull/instructions.md",
+      "starter": "steps/09-fetch-pull/starter",
+      "validator": "steps/09-fetch-pull/validate.js",
+      "hints": [
+        "Clone the local remote into a sibling collaborator directory.",
+        "Push a collaborator commit, then fetch and pull it back here."
+      ]
+    },
+    {
+      "id": "reset-files",
+      "title": "Reset and Restore Files",
+      "instructions": "steps/10-reset-files/instructions.md",
+      "starter": "steps/10-reset-files/starter",
+      "validator": "steps/10-reset-files/validate.js",
+      "hints": [
+        "Use git restore --staged to unstage.",
+        "Use git restore to discard the working-tree edit."
+      ]
+    },
+    {
+      "id": "revert",
+      "title": "Revert a Commit Safely",
+      "instructions": "steps/11-revert/instructions.md",
+      "starter": "steps/11-revert/starter",
+      "validator": "steps/11-revert/validate.js",
+      "hints": [
+        "Make a bad commit.",
+        "Use git revert HEAD so history records the undo."
+      ]
+    },
+    {
+      "id": "reset-commits",
+      "title": "Reset Local Commits",
+      "instructions": "steps/12-reset-commits/instructions.md",
+      "starter": "steps/12-reset-commits/starter",
+      "validator": "steps/12-reset-commits/validate.js",
+      "hints": [
+        "Create a throwaway commit.",
+        "Use git reset --hard HEAD~1 only because this is local training work."
+      ]
+    },
+    {
+      "id": "stash",
+      "title": "Stash Interrupted Work",
+      "instructions": "steps/13-stash/instructions.md",
+      "starter": "steps/13-stash/starter",
+      "validator": "steps/13-stash/validate.js",
+      "hints": [
+        "Use git stash push -u -m \"wip training note\".",
+        "Make and commit a hotfix before popping the stash."
+      ]
+    },
+    {
+      "id": "reflog",
+      "title": "Recover with Reflog",
+      "instructions": "steps/14-reflog/instructions.md",
+      "starter": "steps/14-reflog/starter",
+      "validator": "steps/14-reflog/validate.js",
+      "hints": [
+        "Create a commit, reset it away, then find it in git reflog.",
+        "Recover it with git cherry-pick or git reset --hard."
+      ]
+    }
+  ]
+}
